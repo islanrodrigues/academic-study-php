@@ -6,8 +6,8 @@
  * @author Galvão
  */
 
-require_once 'Produtos.php';
-require_once 'ConexaoDAO.php';
+require_once 'model/Produtos.php';
+require_once 'dao/ConexaoDAO.php';
 
 class ProdutosDAO {
     

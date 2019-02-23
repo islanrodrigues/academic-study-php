@@ -1,7 +1,7 @@
 <?php
 
-require_once 'Usuarios.php';
-require_once 'UsuariosDAO.php';
+require_once 'model/Usuarios.php';
+require_once 'dao/UsuariosDAO.php';
 session_start();
 
 $username = $_POST['txtUser'];
