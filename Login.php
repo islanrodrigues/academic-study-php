@@ -15,7 +15,7 @@ $objUser = $objBD->validarUser($username, $password);
 if ($objUser == null) {
     $_SESSION['statusLogin'] = 0;
     echo "<script> alert('Dados Inválidos') </script>";
-    echo "<script> location.href = 'index.php' </script>";
+    echo "<script> location.href = 'index.html' </script>";
 
 } else {
     $_SESSION['user'] = $objUser->getUsername();    
