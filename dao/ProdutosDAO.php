@@ -17,7 +17,9 @@ class ProdutosDAO {
         
         $itens = new ArrayObject();
         
-        $sqlLista = "SELECT * FROM products";
+        $sqlLista = "SELECT p.*, c.CategoryName, s.CompanyName FROM products p, categories c, suppliers s "
+                . "WHERE p.CategoryID = c.CategoryID AND p.SupplierID = s.SupplierID ORDER BY p.ProductID";
+        
         $rsLista = mysqli_query($vConn, $sqlLista) or die (mysqli_error($vConn));
         
         while ($tblLista = mysqli_fetch_array($rsLista)) {
@@ -63,10 +65,25 @@ class ProdutosDAO {
               
               $objCon->fecharConexao();
               return $produto;
-          }
-          
-          
+          }          
      } 
+     
+     
+     public function cadastarProduto($produto) {
+         $objCon = new ConexaoDAO();
+         $vCon = $objCon->abrirConexao();
+         
+         $sqlCadastro = "INSERT INTO products (ProductID, ProductName, SupplierID, CategoryID, "
+                 . "QuantityPerUnit, UnitPrice, Discontinued) VALUES ('" . $produto->getProductID() .
+                 "' , '" . $produto->getProductName() . "' , '" . $produto->getSupplierID() . 
+                 "' , " . $produto->getCategoryID() . "' , '" . $produto->getQuantityPerUnit() . 
+                 "' , '" . $produto->getUnitPrice() . "', 0)";  
+         
+         mysqli_query($vCon, $sqlCadastro) or die(mysqli_error($vCon));
+         
+         $objCon->fecharConexao();
+         
+     }
 }
 
 ?>
