@@ -7,7 +7,7 @@
  */
 class Produtos {
     
-    private $productID, $productName, $supplierID, $categoryID, $quantityPerUnit, $uniPrice, $categoria, $fornecedor;
+    private $productID, $productName, $supplierID, $categoryID, $quantityPerUnit, $unitPrice, $categoria, $fornecedor;
     
     
       // GETTERS E SETTERS
@@ -56,12 +56,12 @@ class Produtos {
     }
     
 
-    function getUniPrice() {
-        return $this->uniPrice;
+    function getUnitPrice() {
+        return $this->unitPrice;
     }    
 
-    function setUniPrice($uniPrice) {
-        $this->uniPrice = $uniPrice;
+    function setUnitPrice($unitPrice) {
+        $this->unitPrice = $unitPrice;
     }
     
     function getCategoria() {
