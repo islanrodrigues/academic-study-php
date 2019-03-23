@@ -6,8 +6,8 @@
  * @author Galvão
  */
 
-require_once 'model/Usuarios.php';
-require_once 'dao/ConexaoDAO.php';
+require_once '../model/Usuarios.php';
+require_once 'ConexaoDAO.php';
 
 class UsuariosDAO {
    

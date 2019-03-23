@@ -6,8 +6,8 @@
  * @author Islan
  */
 
-require_once 'model/Categorias.php';
-require_once 'dao/ConexaoDAO.php';
+require_once '../model/Categorias.php';
+require_once 'ConexaoDAO.php';
 
 class CategoriasDAO {
     

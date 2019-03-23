@@ -6,8 +6,8 @@
  * @author Galvão
  */
 
-require_once 'model/Produtos.php';
-require_once 'dao/ConexaoDAO.php';
+require_once '../model/Produtos.php';
+require_once 'ConexaoDAO.php';
 
 class ProdutosDAO {
     
@@ -30,7 +30,9 @@ class ProdutosDAO {
             $produto->setProductName($tblLista['ProductName']);
             $produto->setQuantityPerUnit($tblLista['QuantityPerUnit']);
             $produto->setSupplierID($tblLista['SupplierID']);
-            $produto->setUniPrice($tblLista['UnitPrice']);
+            $produto->setUnitPrice($tblLista['UnitPrice']);
+            $produto->setCategoria($tblLista['CategoryName']);
+            $produto->setFornecedor($tblLista['CompanyName']);
             
             $itens->append($produto);
         }        
@@ -61,7 +63,7 @@ class ProdutosDAO {
               $produto->setProductName($tblLista['ProductName']);
               $produto->setQuantityPerUnit($tblLista['QuantityPerUnit']);
               $produto->setSupplierID($tblLista['SupplierID']);
-              $produto->setUniPrice($tblLista['UnitPrice']);
+              $produto->setUnitPrice($tblLista['UnitPrice']);
               
               $objCon->fecharConexao();
               return $produto;

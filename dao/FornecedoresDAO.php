@@ -6,8 +6,8 @@
  * @author Islan
  */
 
-require_once 'model/Fornecedores.php';
-require_once 'dao/COnexaoDAO.php';
+require_once '../model/Fornecedores.php';
+require_once 'ConexaoDAO.php';
 
 class FornecedoresDAO {
     

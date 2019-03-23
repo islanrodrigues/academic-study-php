@@ -24,7 +24,7 @@ class ConexaoDAO {
     
     //méotodo responsável por fechar a conexão com o banco de dados
     public function fecharConexao() {        
-        mysqli_close($vConn);        
+        //mysqli_close($vConn);        
     }    
 }
 
