@@ -17,11 +17,11 @@ class FornecedoresDAO {
         
         $fornecedores = new ArrayObject();
         
-        $sqlFornecedores = "SELECT * FROM suplliers";
+        $sqlFornecedores = "SELECT * FROM suppliers";
         
         $rsFornecedores = mysqli_query($vCon, $sqlFornecedores) or die(mysqli_error($vCon));
         
-        while ($tbLista = mysql_fetch_array($sqlFornecedores)) {
+        while ($tbLista = mysqli_fetch_array($rsFornecedores)) {
             
             $fornecedor = new Fornecedores();
             
