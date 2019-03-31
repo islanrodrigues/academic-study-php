@@ -8,7 +8,7 @@
 
 class Categorias {
  
-    private $categoryID, $categoryName, $description;
+    private $categoryID, $categoryName, $description, $picture;
     
     //GETTERS E SETTERS
     function getCategoryID() {
@@ -33,6 +33,14 @@ class Categorias {
     
     function setDescription($description) {
         $this->description = $description;
+    }
+    
+    function getPicture() {
+        return $this->picture;
+    }
+    
+    function setPicture($picture) {
+        $this->picture = $picture;
     }
 }
 

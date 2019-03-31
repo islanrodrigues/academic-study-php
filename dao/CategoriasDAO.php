@@ -28,6 +28,7 @@ class CategoriasDAO {
             $categoria->setCategoryID($tbLista['CategoryID']);
             $categoria->setCategoryName($tbLista['CategoryName']);
             $categoria->setDescription($tbLista['Description']);
+            $categoria->setPicture($tbLista['Picture']);
             
             $categorias->append($categoria);        
         }

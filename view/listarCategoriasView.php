@@ -17,7 +17,7 @@ $categorias = $categoriaDAO->listarCategorias();
 </head>
 <body>
 
-	<div class="container-fluid" id="div-Main">
+	<div class="container-fluid" id="div-main">
 		<div class="row">
 			<div class="table-responsive col-md-12">
 				<table class="table table-striped table-dark">
@@ -26,6 +26,7 @@ $categorias = $categoriaDAO->listarCategorias();
 							<td>Código</td>
 							<td>Nome</td>
 							<td>Descrição</td>
+							<td>Imagem</td>
 						</tr>
 					</thead>
 					<tbody>
@@ -35,6 +36,7 @@ $categorias = $categoriaDAO->listarCategorias();
 							<td><?php echo $categoria->getCategoryID(); ?></td>
 							<td><?php echo $categoria->getCategoryName(); ?></td>
 							<td><?php echo $categoria->getDescription(); ?></td>
+							<td><?php echo '<img style="width:120px" src="data:image/jpeg;base64,' . base64_encode($categoria->getPicture()) . '" />' ?></td>
 						</tr>
 						<?php } ?>
 
