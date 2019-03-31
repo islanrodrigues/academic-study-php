@@ -19,7 +19,7 @@ class Categorias {
         $this->categoryID = $categoryID;
     }
     
-    function getCategoryame() {
+    function getCategoryName() {
         return $this->categoryName;
     }
     

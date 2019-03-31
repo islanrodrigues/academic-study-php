@@ -21,7 +21,7 @@ class CategoriasDAO {
         
         $rsCategorias = mysqli_query($vCon, $sqlCategorias) or die(mysqli_error($vCon));
         
-        while ($tbLista = mysql_fetch_array($rsCategorias)) {
+        while ($tbLista = mysqli_fetch_array($rsCategorias)) {
             
             $categoria = new Categorias();
             
