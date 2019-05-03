@@ -58,12 +58,12 @@ class ProdutosDAO {
           } else {
                            
               $tblProduto = mysqli_fetch_array($rsProduto);         
-              $produto->setProductID($tblLista['ProductID']);
-              $produto->setCategoryID($tblLista['CategoryID']);
-              $produto->setProductName($tblLista['ProductName']);
-              $produto->setQuantityPerUnit($tblLista['QuantityPerUnit']);
-              $produto->setSupplierID($tblLista['SupplierID']);
-              $produto->setUnitPrice($tblLista['UnitPrice']);
+              $produto->setProductID($tblProduto['ProductID']);
+              $produto->setCategoryID($tblProduto['CategoryID']);
+              $produto->setProductName($tblProduto['ProductName']);
+              $produto->setQuantityPerUnit($tblProduto['QuantityPerUnit']);
+              $produto->setSupplierID($tblProduto['SupplierID']);
+              $produto->setUnitPrice($tblProduto['UnitPrice']);
               
               $objCon->fecharConexao();
               return $produto;
