@@ -124,6 +124,33 @@ class FornecedoresDAO {
             return $fornecedor;
         }       
     }
+    
+    
+    public function alterarFornecedor($idForn, $objForn) {
+        
+        $objCon = new ConexaoDAO();
+         $vCon = $objCon->abrirConexao();
+         
+         $nome = $objForn->getCompanyName();
+         $nomeContato = $objForn->getContactName();
+         $tituloContato = $objForn->getContactTitle();
+         $endereco = $objForn->getAddress();
+         $cidade = $objForn->getCity();
+         $regiao = $objForn->getRegion();
+         $postal = $objForn->getPostalCode();
+         $estado = $objForn->getCountry();
+         $telefone = getPhone();
+         $fax = getFax();
+         $homepage = $objForn->getHomePage();
+         
+         $sqlUpdate = "UPDATE suppliers set CompanyName = '$nome', ContactName = '$nomeContato', ContactTitle = '$tituloContato'"
+                 . " Address = '$endereco', City = '$cidade', Region = '$regiao', PostalCode = '$postal', Country = '$estado'"
+                 . " Phone = '$telefone', Fax = '$fax', HomePage = '$homepage' WHERE SupplierID = '$idForn'";
+         
+         mysqli_query($vCon, $sqlUpdate) or die(mysqli_error($vCon));        
+         
+         $objCon->fecharConexao();        
+    }
 }
 
 ?>

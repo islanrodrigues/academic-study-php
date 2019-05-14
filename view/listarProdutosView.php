@@ -136,7 +136,7 @@
             if(busca) {
                  window.location.assign('?nome=' + busca);
             } else  {
-                window.location.assign('listarProdutosView2.php');
+                window.location.assign('listarProdutosView.php');
             }
                 
         }
