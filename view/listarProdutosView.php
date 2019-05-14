@@ -5,7 +5,7 @@
 	require_once '../dao/ProdutosDAO.php';
 
 	$prodDAO = new ProdutosDAO();
-	$produtos = $prodDAO->listarProdutos();
+	$produtos = $prodDAO->listarProdutos(0, null);
 
 	?>
 
