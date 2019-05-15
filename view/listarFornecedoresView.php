@@ -72,6 +72,13 @@ require_once '../dao/FornecedoresDAO.php';
                 </div>
        
             <div class="table-responsive md-col-12">
+                
+                <?php if (count($fornecedores) == 0) { ?>
+                    
+                    <h2><center>NENHUM RESULTADO OBTIDO!<i class="far fa-frown" style="margin-left: 10px"></i></center></h2>
+                    
+                <?php } else { ?>
+                
 		<table class="table table-striped table-dark">
                     <thead>
                         <tr>
@@ -81,7 +88,6 @@ require_once '../dao/FornecedoresDAO.php';
                             <th>Título do Contato</th>
                             <th>Cidade</th>
                             <th>País</th>
-                            <th>Telefone</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -96,10 +102,9 @@ require_once '../dao/FornecedoresDAO.php';
                                     <td><?php echo $fornecedor->getContactTitle(); ?></td>
                                     <td><?php echo $fornecedor->getCity(); ?></td>
                                     <td><?php echo $fornecedor->getCountry(); ?></td>
-                                    <td><?php echo $fornecedor->getPhone(); ?></td>
                                     <td style="width: 200px">
                                         <center>
-                                            <a href="#" class="btn btn-info" style="background-color: yellowgreen; border-color: yellowgreen">
+                                            <a href="detalhesFornecedorView.php?id=<?= $fornecedor->getSupplierID() ?>" class="btn btn-info" style="background-color: yellowgreen; border-color: yellowgreen">
                                                Detalhes <i class="fas fa-eye" style="margin-left: 5px"></i>
                                             </a>
                                         </center>
@@ -109,7 +114,10 @@ require_once '../dao/FornecedoresDAO.php';
 			<?php }  ?>
 						
                     </tbody>
-		</table>				
+		</table>
+                    
+                <?php } ?>
+                    
             </div>			
 	</div>		
     </div>
