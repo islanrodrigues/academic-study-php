@@ -56,7 +56,7 @@ require_once '../dao/FornecedoresDAO.php';
         
         <hr>
         
-        <a class="btn btn-success" href="#"><i class="fas fa-people-carry" style="margin-right: 10px"></i>Cadastrar Fornecedor</a>
+        <a class="btn btn-success" href="formFornecedorView.php"><i class="fas fa-people-carry" style="margin-right: 10px"></i>Cadastrar Fornecedor</a>
         
         <hr>           
         
