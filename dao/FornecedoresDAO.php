@@ -43,8 +43,6 @@ class FornecedoresDAO {
             $fornecedor->setPostalCode($tbLista['PostalCode']);
             $fornecedor->setCountry($tbLista['Country']);
             $fornecedor->setPhone($tbLista['Phone']);
-            $fornecedor->setFax($tbLista['Fax']);
-            $fornecedor->setHomePage($tbLista['HomePage']);
             
             $fornecedores->append($fornecedor);
         }
@@ -71,7 +69,7 @@ class FornecedoresDAO {
                  $fornecedor->getRegion() . "' , '" . 
                  $fornecedor->getPostalCode() . "' , '" . 
                  $fornecedor->getCountry() . "' , '" . 
-                 $fornecedor->getPhone() . "' , 'NULL', 'NULL')";  
+                 $fornecedor->getPhone() . "' , 'IS NULL', 'IS NULL')";  
          
          mysqli_query($vCon, $sqlCadastro) or die(mysqli_error($vCon));
          
@@ -84,7 +82,7 @@ class FornecedoresDAO {
         $objCon = new ConexaoDAO();
          $vCon = $objCon->abrirConexao();
          
-         $sqlDelete = "DELETE FROM suppliers WHERE CategoryID = '$fornecedorID'";
+         $sqlDelete = "DELETE FROM suppliers WHERE SupplierID = '$fornecedorID'";
          mysqli_query($vCon, $sqlDelete) or die(mysqli_error($vCon));
          
          $objCon->fecharConexao();
@@ -138,14 +136,12 @@ class FornecedoresDAO {
          $cidade = $objForn->getCity();
          $regiao = $objForn->getRegion();
          $postal = $objForn->getPostalCode();
-         $estado = $objForn->getCountry();
-         $telefone = getPhone();
-         $fax = getFax();
-         $homepage = $objForn->getHomePage();
+         $pais = $objForn->getCountry();
+         $telefone = $objForn->getPhone();
          
-         $sqlUpdate = "UPDATE suppliers set CompanyName = '$nome', ContactName = '$nomeContato', ContactTitle = '$tituloContato'"
-                 . " Address = '$endereco', City = '$cidade', Region = '$regiao', PostalCode = '$postal', Country = '$estado'"
-                 . " Phone = '$telefone', Fax = '$fax', HomePage = '$homepage' WHERE SupplierID = '$idForn'";
+         $sqlUpdate = "UPDATE suppliers set CompanyName = '$nome', ContactName = '$nomeContato', ContactTitle = '$tituloContato',"
+                 . " Address = '$endereco', City = '$cidade', Region = '$regiao', PostalCode = '$postal', Country = '$pais',"
+                 . " Phone = '$telefone' WHERE SupplierID = '$idForn'";
          
          mysqli_query($vCon, $sqlUpdate) or die(mysqli_error($vCon));        
          
