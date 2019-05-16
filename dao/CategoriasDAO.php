@@ -54,7 +54,7 @@ class CategoriasDAO {
          $sqlCadastro = "INSERT INTO categories (CategoryID, CategoryName, Description, Picture) "
                  . " VALUES ('" . $categoria->getCategoryID() . "' , '" . 
                  $categoria->getCategoryName() . "' , '" . 
-                 $categoria->getDescription() . "' , 'NULL')";  
+                 $categoria->getDescription() . "' , 'IS NULL')";  
          
          mysqli_query($vCon, $sqlCadastro) or die(mysqli_error($vCon));
          
@@ -97,7 +97,22 @@ class CategoriasDAO {
               $objCon->fecharConexao();
               return $categoria;
           }          
-     } 
+     }
+     
+     public function alterarCategoria($idCategoria, $objCategoria) {
+        $objCon = new ConexaoDAO();
+        $vConn = $objCon->abrirConexao();
+          
+        $nome = $objCategoria->getCategoryName();
+        $desc = $objCategoria->getDescription();
+        
+        $sqlUpdate = "UPDATE categories SET CategoryName = '$nome', Description = '$desc'"
+                . " WHERE CategoryID = '$idCategoria'";
+        
+        mysqli_query($vConn, $sqlUpdate) or die(mysqli_error($vConn));
+          
+        $objCon->fecharConexao();
+     }
 }
 
 ?>
