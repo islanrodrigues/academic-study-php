@@ -24,7 +24,7 @@
          
         
     } else {
-        $produto = NULL;
+        $fornecedor = NULL;
     }
     
 ?>
