@@ -77,9 +77,6 @@
                             <a class="nav-link" href="#">Categorias</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Clientes</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="#">Funcionários</a>
                         </li>
                     </ul>
