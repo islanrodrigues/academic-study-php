@@ -9,7 +9,7 @@ $categoriaDAO = new CategoriasDAO();
         $categorias = $categoriaDAO->listarCategorias(1, $_GET['nome']);
     
     } else {
-        $categorias = $categoriaDAO->listarCategorias(1, null);
+        $categorias = $categoriaDAO->listarCategorias(0, null);
     }   
 
 ?>
@@ -36,16 +36,16 @@ $categoriaDAO = new CategoriasDAO();
             <div class="collapse navbar-collapse" id="navForn">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Produtos</a>
+                        <a class="nav-link" href="listarProdutosView.php">Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Fornecedores</a>
+                        <a class="nav-link" href="listarFornecedoresView.php">Fornecedores</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Categorias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Funcionários</a>
+                        <a class="nav-link" href="listarFuncionariosView.php">Funcionários</a>
                     </li>
                 </ul>
             </div>
