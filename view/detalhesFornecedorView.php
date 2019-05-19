@@ -100,38 +100,38 @@
                     <table class="table table-striped">                        
                         <tbody>
                             <tr>
-                                <th>Código: <?= $fornecedor->getSupplierID() ?></th>
+                                <th><span style="color: red">Código:</span> <?= $fornecedor->getSupplierID() ?></th>
                             </tr>
                             
                             <tr>
-                                <th>Nome da Companhia: <?= $fornecedor->getCompanyName() ?></th>
+                                <th><span style="color: red">Nome da Companhia:</span> <?= $fornecedor->getCompanyName() ?></th>
                             </tr>
                             
                            <tr>
-                               <th>Nome do Contato: <?= $fornecedor->getContactName() ?></th>
+                               <th><span style="color: red">Nome do Contato:</span> <?= $fornecedor->getContactName() ?></th>
                             </tr> 
                             
                             <tr>
-                                <th>Título do Contato: <?= $fornecedor->getContactTitle() ?></th>
+                                <th><span style="color: red">Título do Contato:</span> <?= $fornecedor->getContactTitle() ?></th>
                             </tr>
                             
                             <tr>
-                                <th>Endereço: <?= $fornecedor->getAddress() ?></th>
+                                <th><span style="color: red">Endereço:</span> <?= $fornecedor->getAddress() ?></th>
                             </tr>
                             <tr>
-                                <th>Cidade: <?= $fornecedor->getCity() ?></th>
+                                <th><span style="color: red">Cidade:</span> <?= $fornecedor->getCity() ?></th>
                             </tr>
                             <tr>
-                                <th>Região: <?= $fornecedor->getRegion() ?></th>
+                                <th><span style="color: red">Região:</span> <?= $fornecedor->getRegion() ?></th>
                             </tr>
                             <tr>
-                                <th>Caixa Postal: <?= $fornecedor->getPostalCode() ?></th>
+                                <th><span style="color: red">Caixa Postal:</span> <?= $fornecedor->getPostalCode() ?></th>
                             </tr>
                             <tr>
-                                <th>País: <?= $fornecedor->getCountry() ?></th>
+                                <th><span style="color: red">País:</span> <?= $fornecedor->getCountry() ?></th>
                             </tr>
                             <tr>
-                                <th>Telefone: <?= $fornecedor->getPhone() ?></th>
+                                <th><span style="color: red">Telefone:</span> <?= $fornecedor->getPhone() ?></th>
                             </tr>
                             <tr>
                                 <th><center>

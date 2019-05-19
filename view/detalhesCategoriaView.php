@@ -100,14 +100,14 @@
                     <table class="table table-striped">                        
                         <tbody>
                             <tr>
-                                <th>Código: <?= $categoria->getCategoryID() ?></th>
+                                <th><span style="color: red">Código:</span> <?= $categoria->getCategoryID() ?></th>
                             </tr>
                             
                             <tr>
-                                <th>Nome da Categoria: <?= $categoria->getCategoryName() ?></th>
+                                <th><span style="color: red">Nome da Categoria:</span> <?= $categoria->getCategoryName() ?></th>
                             </tr>  
                              <tr>
-                                 <th>Descrição: <?= $categoria->getDescription() ?></th>
+                                 <th><span style="color: red">Descrição:</span> <?= $categoria->getDescription() ?></th>
                             </tr>  
                             <tr>
                                 <th><center>

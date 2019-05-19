@@ -117,26 +117,26 @@
 
                         <tbody>
                             <tr>
-                                <th>Código: <?= $produto->getProductID() ?></th>
+                                <th><span style="color: red">Código:</span> <?= $produto->getProductID() ?></th>
                             </tr>
                             
                             <tr>
-                                <th>Nome: <?= $produto->getProductName() ?></th>
+                                <th><span style="color: red">Nome:</span> <?= $produto->getProductName() ?></th>
                             </tr>
                             
                            <tr>
-                                <th>Fornecedor: <?= $nomeForn ?></th>
+                                <th><span style="color: red">Fornecedor:</span> <?= $nomeForn ?></th>
                             </tr> 
                             
                             <tr>
-                                <th>Categoria: <?= $nomeCat ?></th>
+                                <th><span style="color: red">Categoria:</span> <?= $nomeCat ?></th>
                             </tr>
                             
                             <tr>
-                                <th>Formato: <?= $produto->getQuantityPerUnit() ?></th>
+                                <th><span style="color: red">Formato:</span> <?= $produto->getQuantityPerUnit() ?></th>
                             </tr>
                             <tr>
-                                <th>Preço Unit.: <?= $produto->getUnitPrice() ?></th>
+                                <th><span style="color: red">Preço Unit.:</span> <?= $produto->getUnitPrice() ?></th>
                             </tr>
                             <tr>
                                 <th><center>

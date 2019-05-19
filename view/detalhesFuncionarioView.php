@@ -105,29 +105,29 @@
                     <table class="table table-striped">                        
                         <tbody>
                             <tr>
-                                <th>Código: <?= $funcionario->getEmployeeID() ?></th>
+                                <th><span style="color: red">Código:</span> <?= $funcionario->getEmployeeID() ?></th>
                             </tr>
                             
                             <tr>
-                                <th>Nome do Funcionário: <?= $funcionario->getFirstName() ?> <?= $funcionario->getLastName() ?></th>
+                                <th><span style="color: red">Nome do Funcionário:</span> <?= $funcionario->getFirstName() ?> <?= $funcionario->getLastName() ?></th>
                             </tr>
                              <tr>
-                                 <th>Título do Funcionário: <?= $funcionario->getTitle() ?></th>
+                                 <th><span style="color: red">Título do Funcionário:</span> <?= $funcionario->getTitle() ?></th>
                             </tr>
                             <tr>
-                                <th>Data de Aniversário: <span class="dateMask"><?= date('d/m/Y', strtotime($funcionario->getBirthDate())) ?> </span></th>
+                                <th><span style="color: red">Data de Aniversário:</span> <span class="dateMask"><?= date('d/m/Y', strtotime($funcionario->getBirthDate())) ?> </span></th>
                             </tr>
                             <tr>
-                                <th>Endereço: <?= $funcionario->getAddress() ?></th>
+                                <th><span style="color: red">Endereço:</span> <?= $funcionario->getAddress() ?></th>
                             </tr>
                              <tr>
-                                 <th>Cidade: <?= $funcionario->getCity() ?></th>
+                                 <th><span style="color: red">Cidade:</span> <?= $funcionario->getCity() ?></th>
                             </tr>
                              <tr>
-                                 <th>País: <?= $funcionario->getCountry() ?></th>
+                                 <th><span style="color: red">País:</span> <?= $funcionario->getCountry() ?></th>
                             </tr>
                              <tr>
-                                 <th>Salary: <?= $funcionario->getSalary() ?></th>
+                                 <th><span style="color: red">Salário:</span> <?= $funcionario->getSalary() ?></th>
                             </tr>
                             <tr>
                                 <th><center>
