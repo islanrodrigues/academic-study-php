@@ -63,16 +63,16 @@
                 <div class="collapse navbar-collapse" id="navForn">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Produtos</a>
+                            <a class="nav-link" href="listarProdutosView.php">Produtos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Fornecedores</a>
+                            <a class="nav-link" href="listarFornecedoresView.php">Fornecedores</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Categorias</a>
+                            <a class="nav-link" href="listarCategoriasView.php">Categorias</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Funcionários</a>
+                            <a class="nav-link" href="listarFuncionariosView.php">Funcionários</a>
                         </li>
                     </ul>
                 </div>
