@@ -26,7 +26,7 @@
             
             $catDAO->cadastrarCategoria($objCat);
             
-            echo "<script>alert('Categoria $nome cadastrada com sucesso!')</script>";
+            echo "<script>alert('Categoria ~$nome~ cadastrada com sucesso!')</script>";
             echo "<script>location.href='listarCategoriasView.php'</script>";            
         
         //ATUALIZAR CATEGORIA
@@ -40,7 +40,7 @@
             
             $catDAO->alterarCategoria($id, $objCat);
             
-            echo "<script>alert('Fornecedor $nome alterado com sucesso!')</script>";
+            echo "<script>alert('Fornecedor ~$nome~ alterado com sucesso!')</script>";
             echo "<script>location.href='listarCategoriasView.php'</script>"; 
         }
         

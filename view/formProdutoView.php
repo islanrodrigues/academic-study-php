@@ -34,7 +34,7 @@
             
             $prodDAO->cadastrarProduto($objProd);
             
-            echo "<script>alert('Produto $nomeProd cadastrado com sucesso!')</script>";
+            echo "<script>alert('Produto ~$nomeProd~ cadastrado com sucesso!')</script>";
             echo "<script>location.href='listarProdutosView.php'</script>";            
         
         //ATUALIZAR PRODUTO
@@ -55,7 +55,7 @@
             
             $prodDAO->alterarProduto($id, $objProd);
             
-            echo "<script>alert('Produto $nomeProd alterado com sucesso!')</script>";
+            echo "<script>alert('Produto ~$nomeProd~ alterado com sucesso!')</script>";
             echo "<script>location.href='listarProdutosView.php'</script>"; 
         }
         

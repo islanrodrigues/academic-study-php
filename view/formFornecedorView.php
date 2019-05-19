@@ -40,7 +40,7 @@
             
             $fornDAO->cadastrarFornecedor($objForn);
             
-            echo "<script>alert('Fornecedor $nomeComp cadastrado com sucesso!')</script>";
+            echo "<script>alert('Fornecedor ~$nomeComp~ cadastrado com sucesso!')</script>";
             echo "<script>location.href='listarFornecedoresView.php'</script>";            
         
         //ATUALIZAR FORNECEDOR
@@ -69,7 +69,7 @@
             
             $fornDAO->alterarFornecedor($id, $objForn);
             
-            echo "<script>alert('Fornecedor $nomeComp alterado com sucesso!')</script>";
+            echo "<script>alert('Fornecedor ~$nomeComp~ alterado com sucesso!')</script>";
             echo "<script>location.href='listarFornecedoresView.php'</script>"; 
         }
         
